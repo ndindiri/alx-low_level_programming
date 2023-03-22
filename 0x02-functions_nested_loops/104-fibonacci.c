@@ -9,27 +9,22 @@
  */
 int main(void)
 {
-	int count = 2;
+	int a = 1;
+	int b = 2;
+	int c = 0;
+	int i = 0;
 
-	float fib1 = 1;
-	float fib2 = fib1 + 1;
-	float sum = fib1 + fib2;
+	printf("%d, %d, ", a, b);
 
-	printf("%.0f, ", fib1);
-	printf("%.0f, ", fib2);
-	while (count < 98)
+	while (i < 96)
 	{
-		count++;
-		printf("%.0f", sum);
-		fib1 = fib2;
-		fib2 = sum;
-		sum = fib1 + fib2;
-		if (count < 98)
-		{
-			printf(", ");
-		}
+		c = a + b;
+		a = b;
+		b = c;
+		printf("%d, ", c);
+		i++;
 	}
 	printf("\n");
+
 	return (0);
 }
-
