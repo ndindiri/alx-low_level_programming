@@ -7,20 +7,27 @@
  */
 int main(void)
 {
-	int count, sum;
-	unsigned long fib1 = 1;
-	unsigned long fib2 = 2;
+	int count = 2;
+	long int fib1 = 1;
+	long int fib2 = fib1 + 1;
+	long int sum = fib1 + fib2;
 
-	for (count = 1; count < 50; count++)
+	printf("%ld, %ld, ", fib1, fib2);
+
+	while (count < 50)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
+		printf("%ld", sum);
+		count++;
 		fib1 = fib2;
 		fib2 = sum;
-		if (count == 49)
-			printf("\n");
-		else
+		sum = fib1 + fib2;
+
+		if (count < 50)
+		{
 			printf(", ");
+		}
 	}
+	printf("\n");
+
 	return (0);
 }
