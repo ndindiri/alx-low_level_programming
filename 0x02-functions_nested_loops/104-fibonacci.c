@@ -23,6 +23,8 @@ int main(void)
 		b = c;
 		printf("%d, ", c);
 		i++;
+
+		printf(", ");
 	}
 	printf("\n");
 
