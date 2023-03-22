@@ -23,7 +23,7 @@ int main(void)
 		printf("%.0f", sum);
 		fib1 = fib2;
 		fib2 = sum;
-		sum = fib1 + fib1;
+		sum = fib1 + fib2;
 
 		if (count < 98)
 		{
