@@ -26,7 +26,9 @@ int main(void)
 		sum = fib1 + fib1;
 
 		if (count < 98)
-			printf(", ");
+		{
+			printf(",");
+		}
 	}
 	printf("\n");
 
