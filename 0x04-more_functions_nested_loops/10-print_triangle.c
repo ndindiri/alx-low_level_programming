@@ -8,29 +8,25 @@
  * Use the character # to print the triangle
  * Return: should return always 0.
  */
-
 void print_triangle(int size)
 {
-	int i;
-	int j;
-	int nbr = size - 1;
+	int i = 0, j, n = size - 1;
 
 	if (size > 0)
 	{
-		for (i = 0; i < size; i++)
+		for (; i < size; i++)
 		{
 			for (j = 0; j < size; j++)
 			{
-				if (j < nbr)
+				if (j < n)
 					_putchar(' ');
 				else
 					_putchar('#');
 			}
-			nbr--;
+			n--;
 			_putchar('\n');
 		}
 	}
 	else
 		_putchar('\n');
-	return (0);
 }
