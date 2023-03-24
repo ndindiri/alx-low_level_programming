@@ -7,23 +7,15 @@
   */
 void print_number(int n)
 {
-	/*Base condition*/
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n *= -1;
 	}
-	/*Base case*/
-	if (n == 0)
+	if (n / 10 != 0)
 	{
-		_putchar('0');
-		return;
+		print_number(n / 10);
 	}
-	/*Recursive case*/
-
-	print_number(n / 10);
-
-	/*Print last digit*/
-
-	_putchar((n % 10) + '0');
+	_putchar(n % 10 + '0');
 }
+
