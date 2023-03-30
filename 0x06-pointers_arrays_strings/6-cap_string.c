@@ -3,37 +3,35 @@
 /**
  * cap_string - a function that capitalizes all words of a string.
  * Separators of words: space, tabulation,
- * new line, ,, ;, ., !, ?, ", (, ), {, and }
- * @s: string to be capitalized.
- * Return: A pointer to the changed string.
+ * new line, ,, ;, ., !, ?,...
+ * @str: string to be capitalized.
+ * Return: should return a  pointer.
  */
-char *cap_string(char *s)
+
+char *cap_string(char *str)
 {
-	int len = 0;
+	int i, j;
 
-	while (s[len])
+	i = 0;
+
+	char a[] = " \t\n,;.!?\"(){}";
+
+	while (*(str + i))
 	{
-		while (!(s[len] >= 'a' && str[len] <= 'z'))
-			len++;
-
-		if (s[len - 1] == ' ' ||
-		    s[len - 1] == '\t' ||
-		    s[len - 1] == '\n' ||
-		    s[len - 1] == ',' ||
-		    s[len - 1] == ';' ||
-		    s[len - 1] == '.' ||
-		    s[len - 1] == '!' ||
-		    s[len - 1] == '?' ||
-		    s[len - 1] == '"' ||
-		    s[len - 1] == '(' ||
-		    s[len - 1] == ')' ||
-		    s[len - 1] == '{' ||
-		    s[len - 1] == '}' ||
-		    len == 0)
-			s[len] -= 32;
-
-		len++;
+		if (*(str + i) >= 'a' && *(str + i) <= 'z')
+		{
+			if (i == 0)
+				*(str + i) -= 'a' - 'A';
+			elstre
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(str + i - 1))
+						*(str + i) -= 'a' - 'A';
+				}
+			}
+		}
+		i++;
 	}
-
-	return (s);
+	return (str);
 }
