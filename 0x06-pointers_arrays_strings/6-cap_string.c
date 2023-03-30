@@ -22,7 +22,7 @@ char *cap_string(char *str)
 		{
 			if (i == 0)
 				*(str + i) -= 'a' - 'A';
-			elstre
+			else
 			{
 				for (j = 0; j <= 12; j++)
 				{
